@@ -1,0 +1,3 @@
+botcity-framework-core
+requests
+pygetwindow
