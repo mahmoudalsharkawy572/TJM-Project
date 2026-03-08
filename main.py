@@ -61,17 +61,12 @@ def main():
             # Notepad opened via OS — no coordinates, but window is confirmed open
             logging.info("Proceeding with OS-launched Notepad.")
         else:
-            # Icon was found and clicked — validate window one more time
-            if not validate_notepad_window():
-                logging.error("Notepad window did not appear after icon click. Aborting.")
-                print("Notepad window failed to open.")
-                return
-
+            # Icon found - Notepad opened via double-click
             x, y = result
             logging.info(f"Proceeding with icon-launched Notepad (clicked at {x}, {y}).")
 
         # Write post content and save to file
-        file_path = os.path.join(project_path, f"post_{index}.txt")
+        file_path = os.path.join(project_path, f"post_{post['id']}.txt")
         write_post_to_notepad(bot, post, file_path)
 
     # 5. Clean up

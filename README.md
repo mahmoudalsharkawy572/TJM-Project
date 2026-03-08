@@ -40,12 +40,13 @@ tjm-project/
 ## ⚙️ Setup
 
 ### 1. Clone the repository
+
 ```bash
-git clone https://github.com/YourUsername/tjm-project.git
-cd tjm-project
+git clone https://github.com/mahmoudalsharkawy572/tjm-project.git
 ```
 
 ### 2. Add your Notepad icon image
+
 - Take a screenshot of the Notepad icon on **your machine's desktop**
 - Crop tightly around the icon with minimal padding
 - Save it as `notepad_icon.png` inside the `resources/` folder
@@ -61,11 +62,13 @@ cd tjm-project
 `uv` is the recommended way to run this project. It handles the virtual environment and dependencies automatically.
 
 **Install uv (Windows):**
+
 ```powershell
 powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
 ```
 
 **Install dependencies and run:**
+
 ```bash
 uv sync
 uv run main.py
@@ -97,7 +100,7 @@ python main.py
 
 ## 📝 Output
 
-- Text files `post_1.txt`, `post_2.txt`, `post_3.txt` are saved to `Desktop/tjm-project/`
+- Text files `post_1.txt`, `post_....txt`, `post_n.txt` are saved to `Desktop/tjm-project/`
 - A log file `automation.log` is also created in the same folder
 
 ---
@@ -106,13 +109,13 @@ python main.py
 
 All settings are in `config.py`:
 
-| Variable | Description | Default |
-|---|---|---|
-| `API_URL` | The posts API endpoint | dummyjson.com/posts |
-| `POSTS_LIMIT` | How many posts to process | 3 |
-| `MAX_GROUNDING_ATTEMPTS` | Retries to find the Notepad icon | 3 |
-| `IMAGE_MATCH_THRESHOLD` | Confidence for image matching (0.0–1.0) | 0.85 |
-| `NOTEPAD_WINDOW_TIMEOUT` | Seconds to wait for Notepad to open | 5 |
+| Variable                 | Description                             | Default             |
+| ------------------------ | --------------------------------------- | ------------------- |
+| `API_URL`                | The posts API endpoint                  | dummyjson.com/posts |
+| `POSTS_LIMIT`            | How many posts to process               | 3                   |
+| `MAX_GROUNDING_ATTEMPTS` | Retries to find the Notepad icon        | 3                   |
+| `IMAGE_MATCH_THRESHOLD`  | Confidence for image matching (0.0–1.0) | 0.85                |
+| `NOTEPAD_WINDOW_TIMEOUT` | Seconds to wait for Notepad to open     | 5                   |
 
 ---
 
