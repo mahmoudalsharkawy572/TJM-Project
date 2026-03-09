@@ -1,6 +1,8 @@
 import logging
 import os
 import time
+import pyautogui
+pyautogui.FAILSAFE = False
 
 from config import SHOW_DESKTOP_WAIT
 
@@ -11,8 +13,9 @@ def show_desktop(bot) -> None:
     Uses an increased wait time to ensure all windows are fully minimized
     before attempting icon detection — handles slower machines.
     """
-    bot.type_keys(["win", "d"])
-    time.sleep(SHOW_DESKTOP_WAIT)
+    pyautogui.hotkey("win", "d")
+    time.sleep(1.5)
+  
 
 
 def open_notepad(bot, x: int, y: int) -> None:
